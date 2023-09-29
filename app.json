@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "name": "BookHub",
+    "slug": "BookHub",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  },
+  "name": "BookHub"
+}
