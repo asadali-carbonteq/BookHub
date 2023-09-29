@@ -1,7 +1,8 @@
 import { StatusBar } from "expo-status-bar";
 import React, { useState } from "react";
-import { StyleSheet, Text, View, Pressable, TextInput } from "react-native";
+import { StyleSheet, Text, View, Pressable, TextInput, ImageBackground } from "react-native";
 import { checkCredentials, addUser } from "../database";
+import bg from '../images/bg.png'
 
 export default function SignInScreen() {
     const [username, setUsername] = useState("");
@@ -23,6 +24,7 @@ export default function SignInScreen() {
 
     return (
         <View style={styles.container}>
+            {/* <ImageBackground source={bg} style={styles.background}> */}
             <Text style={styles.mainText}>Please Sign In to Use the Application.</Text>
             <Text style={styles.secondaryText}>Enter Username</Text>
             <TextInput
@@ -40,6 +42,7 @@ export default function SignInScreen() {
                 <Text style={styles.continueBtnText}>Sign In</Text>
             </Pressable>
             <Text style={{ color: "white" }}>{signInResult}</Text>
+            {/* </ImageBackground> */}
         </View>
     )
 }
@@ -87,5 +90,11 @@ const styles = StyleSheet.create({
         fontSize: 20,
         color: '#5C469C',
         fontWeight: 900,
-    }
+    },
+    background: {
+        flex: 1,
+        // width: '100%',
+        resizeMode: 'cover',
+        justifyContent: 'center',
+    },
 })

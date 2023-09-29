@@ -1,16 +1,19 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View, Pressable } from 'react-native';
+import { StyleSheet, Text, View, Pressable, ImageBackground } from 'react-native';
+import bg from '../images/bg.png'
 
 
 export default function WelcomeScreen() {
     return (
         <View style={styles.container}>
+            {/* <ImageBackground source={bg} style={styles.background}> */}
             <Text style={styles.text}>Welcome to <span style={styles.textSpan}>BookHub</span></Text>
             <Pressable style={styles.continueBtn}>
                 <Text style={styles.continueBtnText}>Continue...</Text>
             </Pressable>
             <StatusBar style="auto" />
+            {/* </ImageBackground> */}
         </View>
     )
 }
@@ -43,7 +46,13 @@ const styles = StyleSheet.create({
         fontSize: 25,
         color: '#5C469C',
         fontWeight: 900,
-    }
+    },
+    background: {
+        flex: 1,
+        // width: '100%',
+        resizeMode: 'cover',
+        justifyContent: 'center',
+    },
 });
 
 
