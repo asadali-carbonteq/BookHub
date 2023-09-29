@@ -1,7 +1,7 @@
 
 const users = [
     { username: "asad", email: "test@gmail.com", password: "test" },
-    { username: "user2", email: "test@gmail.com", password: "password2" },
+    { username: "moghis", email: "test@gmail.com", password: "password2" },
 ];
 
 function addUser(newUser) {

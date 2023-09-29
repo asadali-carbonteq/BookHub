@@ -1,7 +1,7 @@
 import { StatusBar } from "expo-status-bar";
 import React, { useState } from "react";
 import { StyleSheet, Text, View, Pressable, TextInput } from "react-native";
-import { checkCredentials } from "../database";
+import { checkCredentials, addUser } from "../database";
 
 export default function SignInScreen() {
     const [username, setUsername] = useState("");
@@ -9,21 +9,15 @@ export default function SignInScreen() {
     const [signInResult, setSignInResult] = useState("");
 
 
-
-    // const users = [
-    //     { username: "asad", password: "test" },
-    //     { username: "moghis", password: "test" },
-    // ];
-
     const handleSignIn = () => {
         const user = checkCredentials(username, password);
-        // const user = users.find((user) => user.username === username && user.password === password);
 
         if (user) {
             setSignInResult("Sign In Successful");
         } else {
             setSignInResult("Your username or password is incorrect");
         }
+
         setPassword("");
     };
 
