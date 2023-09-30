@@ -1,21 +1,37 @@
 import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View, Image, Pressable } from 'react-native';
+import React, { useState, useEffect } from 'react';
+import { StyleSheet, Text, View, Image, ScrollView, Pressable } from 'react-native';
 import logo from '../images/logo.png'
 import BookCard from './card';
+import data from '../books.json'
 
 export default function HomeScreen() {
+
+    const [books, setBooks] = useState([]);
+
+    useEffect(() => {
+        setBooks(data);
+    }, []);
+
+
     return (
         <View style={styles.container}>
             <View style={styles.navbar}>
                 <Image source={logo} style={styles.logo} />
                 <Text style={styles.navText}>BookHub</Text>
             </View>
-            <View style={styles.bookCard}>
-                <BookCard />
-                <BookCard />
-            </View>
-        </View>
+            <ScrollView style={styles.bookCard}>
+                {books.map((book) => (
+                    <BookCard
+                        key={book.id}
+                        title={book.title}
+                        author={book.author}
+                        image={book.image}
+                    />
+                ))}
+            </ScrollView>
+
+        </View >
     )
 }
 

@@ -7,9 +7,9 @@ import HomeScreen from './components/home';
 
 export default function App() {
   return (
-    <WelcomeScreen />
+    // <WelcomeScreen />
     // <SignInScreen />
-    // <HomeScreen />
+    <HomeScreen />
   );
 }
 
