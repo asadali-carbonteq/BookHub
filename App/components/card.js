@@ -3,12 +3,13 @@ import { StyleSheet, Text, View, Image, Pressable } from 'react-native';
 import book from '../images/book2.jpg';
 
 
-export default function BookCard() {
+export default function BookCard({ image, title, author }) {
     return (
         <View style={styles.container}>
             <View style={styles.card}>
-                <Image source={book} style={styles.bookCover} />
-                <Text>Hello</Text>
+                <Image source={{ uri: image }} style={styles.bookCover} />
+                <Text style={styles.title}>{title}</Text>
+                <Text style={styles.author}>{author}</Text>
 
             </View>
         </View>
@@ -47,7 +48,17 @@ const styles = StyleSheet.create({
         }
     },
     bookCover: {
-        width: '50%',
-        height: '100%'
-    }
+        width: 100,
+        height: 200,
+        borderRadius: 10,
+    },
+    title: {
+        fontSize: 18,
+        fontWeight: 'bold',
+        marginTop: 10,
+    },
+    author: {
+        fontSize: 16,
+        color: '#777',
+    },
 })

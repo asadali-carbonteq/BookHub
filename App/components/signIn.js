@@ -1,7 +1,7 @@
 import { StatusBar } from "expo-status-bar";
 import React, { useState } from "react";
 import { StyleSheet, Text, View, Pressable, TextInput, ImageBackground } from "react-native";
-import { checkCredentials, addUser } from "../database";
+import { checkCredentials, addUser } from "../database/database";
 import bg from '../images/bg.png'
 
 export default function SignInScreen({navigation}) {
