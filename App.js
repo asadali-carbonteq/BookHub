@@ -7,7 +7,7 @@ import SignupForm from './components/signUp';
 
 export default function App() {
   return (
-    //<WelcomeScreen />
+    // <WelcomeScreen />
     // <SignInScreen />
     <SignupForm/>
   );
