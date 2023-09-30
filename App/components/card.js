@@ -6,12 +6,9 @@ import book from '../images/book2.jpg';
 export default function BookCard({ image, title, author }) {
     return (
         <View style={styles.container}>
-            <View style={styles.card}>
-                <Image source={image} style={styles.bookCover} />
-                {/* <Text style={styles.title}>{title}</Text>
-                <Text style={styles.author}>{author}</Text> */}
-
-            </View>
+            <Image source={{ uri: image }} style={styles.bookCover} />
+            {/* <View style={styles.card}> */}
+            {/* </View> */}
         </View>
     )
 }
@@ -19,16 +16,14 @@ export default function BookCard({ image, title, author }) {
 
 const styles = StyleSheet.create({
     container: {
-        flex: 1,
+        // flex: 1,
         justifyContent: 'center',
-        alignItems: 'center', 
+        alignItems: 'center',
         marginTop: 10
     },
     card: {
-        flex: 1,
-        flexDirection: 'row',
-        justifyContent: 'center',
-        alignItems: 'center',
+        // justifyContent: 'center',
+        // alignItems: 'center',
         minWidth: 320,
         minHeight: 180,
         backgroundColor: '#D4ADFC',
@@ -47,15 +42,17 @@ const styles = StyleSheet.create({
     },
 
     bookCover: {
-        width: '100%', 
-        height: '100%', 
-        borderRadius: 10,
-        flexDirection: 'row',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
+        width: 150,
+        height: 200,
+        margin: 10,
+        borderRadius: 15
+
+        // borderRadius: 10,
+        // backgroundSize: 'fill',
+        // backgroundPosition: 'center',
         // backgroundImage: `url(${book})`,
     },
-    
+
     author: {
         fontSize: 16,
         color: '#777',

@@ -1,26 +1,27 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import { StyleSheet, Text, View, Pressable, ImageBackground } from 'react-native';
+import { StyleSheet, Text, View, Pressable, Image, ImageBackground } from 'react-native';
 import bg from '../images/bg.png'
+import logo from '../images/logo.png'
 
 
-export default function WelcomeScreen({navigation}) {
+export default function WelcomeScreen({ navigation }) {
     return (
         <View style={styles.container}>
-            {/* <ImageBackground source={bg} style={styles.background}> */}
+            <Image source={logo} style={styles.logo} />
             <Text style={styles.text}>Welcome to <span style={styles.textSpan}>BookHub</span></Text>
-            <Pressable 
-                style={styles.continueBtn}
-                onPress={() => navigation.navigate('Signup')}
-
-            >
-                <Text style={styles.continueBtnText}>Continue...</Text>
-            </Pressable>
+            <View style={styles.btnContainer}>
+                <Pressable style={styles.continueBtn} onPress={() => navigation.navigate('SignIn')}>
+                    <Text style={styles.continueBtnText}>Sign In</Text>
+                </Pressable>
+                <Pressable style={styles.continueBtn} onPress={() => navigation.navigate('SignUp')}>
+                    <Text style={styles.continueBtnText}>Sign Up</Text>
+                </Pressable>
+            </View>
             <StatusBar style="auto" />
-            {/* </ImageBackground> */}
         </View>
     )
-    
+
 }
 
 
@@ -35,6 +36,9 @@ const styles = StyleSheet.create({
         color: '#5C469C',
         fontSize: 30
     },
+    btnContainer: {
+        flexDirection: 'row'
+    },
     textSpan: {
         color: '#D4ADFC'
     },
@@ -45,19 +49,33 @@ const styles = StyleSheet.create({
         marginTop: 30,
         backgroundColor: '#D4ADFC',
         color: '#5C469C',
-        borderRadius: 40
+        borderRadius: 40,
+
     },
     continueBtnText: {
-        fontSize: 25,
+        fontSize: 20,
         color: '#5C469C',
         fontWeight: 900,
     },
     background: {
         flex: 1,
-        // width: '100%',
         resizeMode: 'cover',
         justifyContent: 'center',
     },
+    logo: {
+        width: 150,
+        height: 150,
+        padding: 20,
+        margin: 10,
+
+        shadowColor: '#D4ADFC',
+        shadowOpacity: '0.5',
+        shadowRadius: 10,
+        shadowOffset: {
+            height: 1,
+            width: 1,
+        }
+    }
 });
 
 

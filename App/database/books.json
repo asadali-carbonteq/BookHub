@@ -1,44 +1,72 @@
 [
-    {
-      "id": 1,
-      "title": "Book Title 1",
-      "author": "Author 1",
-      "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-      "image": "image1.jpg"
-    },
-    {
-      "id": 2,
-      "title": "Book Title 2",
-      "author": "Author 2",
-      "description": "",
-      "image": "image2.jpg"
-    },
-    {
-        "id": 2,
-        "title": "Book Title 2",
-        "author": "Author 2",
-        "description": "",
-        "image": "image2.jpg"
-      },
-      {
-        "id": 2,
-        "title": "Book Title 2",
-        "author": "Author 2",
-        "description": "",
-        "image": "image2.jpg"
-      },
-      {
-        "id": 2,
-        "title": "Book Title 2",
-        "author": "Author 2",
-        "description": "",
-        "image": "image2.jpg"
-      },
-      {
-        "id": 2,
-        "title": "Book Title 2",
-        "author": "Author 2",
-        "description": "",
-        "image": "image2.jpg"
-      }
-  ]
+  {
+    "id": 1,
+    "title": "Book Title 1",
+    "author": "Author 1",
+    "description": "Lorem Ipse Aldus PageMaker including versions of Lorem Ipsum.",
+    "image": "https://designforwriters.com/wp-content/uploads/2017/10/design-for-writers-book-cover-tf-2-a-million-to-one.jpg"
+  },
+  {
+    "id": 2,
+    "title": "Book Title 2",
+    "author": "Author 2",
+    "description": "this is book2",
+    "image": "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/contemporary-fiction-night-time-book-cover-design-template-1be47835c3058eb42211574e0c4ed8bf_screen.jpg?ts=1637012564"
+  },
+  {
+    "id": 3,
+    "title": "Book Title 3",
+    "author": "Author 2",
+    "description": "asdlkjfa",
+    "image": "https://d1csarkz8obe9u.cloudfront.net/posterpreviews/yellow-business-leadership-book-cover-design-template-dce2f5568638ad4643ccb9e725e5d6ff.jpg?ts=1637017516"
+  },
+  {
+    "id": 4,
+    "title": "Book Title 4",
+    "author": "Author 2",
+    "description": "alsdjf",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTREDN8N7sKL8GWarIhFW-SXoohEbeG2wrx_A&usqp=CAU"
+  },
+  {
+    "id": 5,
+    "title": "Book Title 5",
+    "author": "Author 2",
+    "description": "alsdjf",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRajTv5yx6ePuGcH9YztYNrqmQKe7jPL2s3EQ&usqp=CAU"
+  },
+  {
+    "id": 6,
+    "title": "Book Title 6",
+    "author": "Author 2",
+    "description": "asdlkjf",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcStK8CEI6AbGXjRGftoFn7n154W47CHU4v84NPJhPkF7AKKSSRGJq8wU4eoQQHgekP-Dtk&usqp=CAU"
+  },
+  {
+    "id": 7,
+    "title": "Book Title 4",
+    "author": "Author 2",
+    "description": "adf",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSml-FEskwdV-j2j-nA8frjWd5_CpmepyJNA&usqp=CAU"
+  },
+  {
+    "id": 8,
+    "title": "Book Title 5",
+    "author": "Author 2",
+    "description": "",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCBozk3sxY9-hx2apV246Aop5hzCKe1Yoe2I_bVICUPiXNu5IXSaeKY0rWJt5qOVEYMRo&usqp=CAU"
+  },
+  {
+    "id": 9,
+    "title": "Book Title 6",
+    "author": "Author 2",
+    "description": "",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQp5afriY42x8Qtb8uWon0ds47bI-AM5kbNqw&usqp=CAU"
+  },
+  {
+    "id": 10,
+    "title": "Book Title 6",
+    "author": "Author 2",
+    "description": "",
+    "image": "https://nicolaalter.files.wordpress.com/2017/05/loststars.jpg"
+  }
+]

@@ -1,8 +1,9 @@
 import { StatusBar } from "expo-status-bar";
 import React, { useState } from "react";
-import { StyleSheet, Text, View, Pressable, TextInput, ImageBackground } from "react-native";
-import { checkCredentials, addUser } from "../database/database"; // Assuming this function checks credentials
-import bg from '../images/bg.png'
+import { StyleSheet, Text, View, Pressable, Image, TextInput } from "react-native";
+import { checkCredentials } from "../database/database"; // Assuming this function checks credentials
+import logo from '../images/logo.png'
+
 
 export default function SignInScreen({ navigation }) {
     const [username, setUsername] = useState("");
@@ -24,6 +25,10 @@ export default function SignInScreen({ navigation }) {
 
     return (
         <View style={styles.container}>
+            <Pressable style={styles.backBtn} onPress={() => navigation.navigate('Welcome')}>
+                <Text style={styles.backBtnText}>Back</Text>
+            </Pressable>
+            <Image source={logo} style={styles.logo} />
             <Text style={styles.mainText}>Please Sign In to Use the Application.</Text>
             <Text style={styles.secondaryText}>Enter Username</Text>
             <TextInput
@@ -58,7 +63,7 @@ const styles = StyleSheet.create({
     },
     mainText: {
         color: '#D4ADFC',
-        fontSize: 20,
+        fontSize: 15,
         fontWeight: 400,
         marginBottom: 50,
     },
@@ -97,5 +102,31 @@ const styles = StyleSheet.create({
         // width: '100%',
         resizeMode: 'cover',
         justifyContent: 'center',
+    },
+    logo: {
+        width: 150,
+        height: 150,
+        padding: 20,
+        margin: 10,
+
+        shadowColor: '#D4ADFC',
+        shadowOpacity: '0.5',
+        shadowRadius: 10,
+        shadowOffset: {
+            height: 1,
+            width: 1,
+        }
+    },
+    backBtn: {
+        position: 'absolute',
+        top: 0,
+        left: 0,
+        margin: 10,
+        padding: 10,
+    },
+    backBtnText: {
+        color: '#D4ADFC',
+        fontSize: 15,
+        fontWeight: 400
     },
 })

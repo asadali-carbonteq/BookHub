@@ -15,11 +15,12 @@ export default function App() {
     // <SignInScreen />
     // <SignupForm/>
     // <HomeScreen />
+    // <BookDetails />
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Welcome">
-        <Stack.Screen name="welcome" component={WelcomeScreen} />
-        <Stack.Screen name="Signup" component={SignupForm} />
-        <Stack.Screen name="SignIn" component={SignInScreen} />
+      <Stack.Navigator initialRouteName="Welcome" screenOptions={{ headerShown: false }}>
+        {/* <Stack.Screen name="Welcome" component={WelcomeScreen} />
+        <Stack.Screen name="SignUp" component={SignupForm} />
+        <Stack.Screen name="SignIn" component={SignInScreen} /> */}
         <Stack.Screen name="Home" component={HomeScreen} />
         <Stack.Screen name="BookDetails" component={BookDetails} />
       </Stack.Navigator>
