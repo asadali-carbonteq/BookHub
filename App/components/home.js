@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { StyleSheet, Text, View, Image, ScrollView, Pressable } from 'react-native';
 import logo from '../images/logo.png'
 import BookCard from './card';
-import data from '../books.json'
+import data from '../database/books.json'
 
 export default function HomeScreen() {
 
