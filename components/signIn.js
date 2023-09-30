@@ -4,7 +4,7 @@ import { StyleSheet, Text, View, Pressable, TextInput, ImageBackground } from "r
 import { checkCredentials, addUser } from "../database";
 import bg from '../images/bg.png'
 
-export default function SignInScreen() {
+export default function SignInScreen({navigation}) {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
     const [signInResult, setSignInResult] = useState("");
@@ -38,7 +38,13 @@ export default function SignInScreen() {
                 value={password}
                 onChangeText={(text) => setPassword(text)}
             ></TextInput>
-            <Pressable style={styles.continueBtn} onPress={handleSignIn}>
+            <Pressable 
+                style={styles.continueBtn} 
+                onPress={handleSignIn}
+                onPressIn={()=>navigation.navigate('Home')}
+            
+
+            >
                 <Text style={styles.continueBtnText}>Sign In</Text>
             </Pressable>
             <Text style={{ color: "white" }}>{signInResult}</Text>

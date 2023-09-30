@@ -4,18 +4,23 @@ import { StyleSheet, Text, View, Pressable, ImageBackground } from 'react-native
 import bg from '../images/bg.png'
 
 
-export default function WelcomeScreen() {
+export default function WelcomeScreen({navigation}) {
     return (
         <View style={styles.container}>
             {/* <ImageBackground source={bg} style={styles.background}> */}
             <Text style={styles.text}>Welcome to <span style={styles.textSpan}>BookHub</span></Text>
-            <Pressable style={styles.continueBtn}>
+            <Pressable 
+                style={styles.continueBtn}
+                onPress={() => navigation.navigate('Signup')}
+
+            >
                 <Text style={styles.continueBtnText}>Continue...</Text>
             </Pressable>
             <StatusBar style="auto" />
             {/* </ImageBackground> */}
         </View>
     )
+    
 }
 
 
