@@ -19,7 +19,7 @@ const BookDetails = ({ route }) => {
             </View>
             <View style={styles.detailContainer}>
                 <Text style={styles.title}>{title}</Text>
-                {/* <Text style={styles.description}>{author} </Text> */}
+                <Text style={styles.description}>{author} </Text>
                 <Text style={styles.description}>{description}</Text>
             </View>
         </View>
