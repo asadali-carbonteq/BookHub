@@ -1,20 +1,20 @@
 import { StatusBar } from "expo-status-bar";
 import React, { useState } from "react";
 import { StyleSheet, Text, View, Pressable, TextInput, ImageBackground } from "react-native";
-import { checkCredentials, addUser } from "../database/database";
+import { checkCredentials, addUser } from "../database/database"; // Assuming this function checks credentials
 import bg from '../images/bg.png'
 
-export default function SignInScreen({navigation}) {
+export default function SignInScreen({ navigation }) {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
     const [signInResult, setSignInResult] = useState("");
-
 
     const handleSignIn = () => {
         const user = checkCredentials(username, password);
 
         if (user) {
             setSignInResult("Sign In Successful");
+            navigation.navigate('Home');
         } else {
             setSignInResult("Your username or password is incorrect");
         }
@@ -24,7 +24,6 @@ export default function SignInScreen({navigation}) {
 
     return (
         <View style={styles.container}>
-            {/* <ImageBackground source={bg} style={styles.background}> */}
             <Text style={styles.mainText}>Please Sign In to Use the Application.</Text>
             <Text style={styles.secondaryText}>Enter Username</Text>
             <TextInput
@@ -38,17 +37,13 @@ export default function SignInScreen({navigation}) {
                 value={password}
                 onChangeText={(text) => setPassword(text)}
             ></TextInput>
-            <Pressable 
-                style={styles.continueBtn} 
+            <Pressable
+                style={styles.continueBtn}
                 onPress={handleSignIn}
-                onPressIn={()=>navigation.navigate('Home')}
-            
-
             >
                 <Text style={styles.continueBtnText}>Sign In</Text>
             </Pressable>
             <Text style={{ color: "white" }}>{signInResult}</Text>
-            {/* </ImageBackground> */}
         </View>
     )
 }

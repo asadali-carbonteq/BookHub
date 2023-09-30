@@ -1,6 +1,6 @@
 import React,{ useState} from 'react';
 import { ScrollView, TextInput,View, Text, StyleSheet, Pressable } from 'react-native';
-import { addUser } from '../database';
+import { addUser } from '../database/database';
 
 const signupForm = ({navigation}) => {
   const[username, onChangeUserName] = useState('');
@@ -32,6 +32,7 @@ const signupForm = ({navigation}) => {
         value={username}
         onChangeText={onChangeUserName}
         placeholder='Enter Username'
+
       />
       {/* <Text style={styles.secondaryText}>Enter Your Email</Text> */}
       <TextInput 

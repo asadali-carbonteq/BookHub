@@ -5,7 +5,7 @@ import logo from '../images/logo.png'
 import BookCard from './card';
 import data from '../database/books.json'
 
-export default function HomeScreen() {
+export default function HomeScreen({navigation}) {
 
     const [books, setBooks] = useState([]);
 
@@ -22,12 +22,24 @@ export default function HomeScreen() {
             </View>
             <ScrollView style={styles.bookCard}>
                 {books.map((book) => (
-                    <BookCard
+                    <Pressable 
                         key={book.id}
-                        title={book.title}
-                        author={book.author}
-                        image={book.image}
-                    />
+                        onPress={()=>{
+                            navigation.navigate('BookDetails',{
+                                title:book.title,
+                                author:book.author,
+                                description:book.description,
+                            });
+                        }}
+                    >
+                        <BookCard
+                            key={book.id}
+                            title={book.title}
+                            author={book.author}
+                            image={book.image}
+                            description={book.description}
+                        />
+                    </Pressable>
                 ))}
             </ScrollView>
 
